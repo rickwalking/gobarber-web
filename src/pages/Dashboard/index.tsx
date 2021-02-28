@@ -9,7 +9,7 @@ import { FiClock, FiPower } from 'react-icons/fi';
 import DayPicker, { DayModifiers } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
-
+import { Link } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/auth';
 
@@ -141,7 +141,7 @@ const Dashboard: React.FC = () => {
                         <img src={user.avatar_url} alt={user.name} />
                         <div>
                         <span>Bem vindo,</span>
-                        <strong>{user.name}</strong>
+                        <Link to="/profile"><strong>{user.name}</strong></Link>
                         </div>
                     </Profile>
                     <button type="button" onClick={signOut}>
